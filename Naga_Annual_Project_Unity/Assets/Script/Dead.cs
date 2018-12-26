@@ -7,7 +7,7 @@ public class Dead : MonoBehaviour {
     public GameObject repop;
     private GameObject player;
     private Animator anim;
-    private float fallTime = 1f;
+    private float fallTime = 0.5f;
 
 
 	// Use this for initialization
