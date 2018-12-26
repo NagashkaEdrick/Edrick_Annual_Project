@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dead : MonoBehaviour {
 
-    public GameObject repop;
+    private GameObject repop;
     private GameObject player;
     private Animator anim;
     private float fallTime = 0.5f;
@@ -12,6 +12,7 @@ public class Dead : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        repop = GameObject.FindGameObjectWithTag("Respawn");
         player = GameObject.FindGameObjectWithTag("Player");
         anim = player.GetComponent<Animator>();
     }

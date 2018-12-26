@@ -63,8 +63,13 @@
   <ItemGroup>
     <Compile Include="Assets\Animator_Script\Animator_Controler.cs" />
     <Compile Include="Assets\Script\Dead.cs" />
+    <Compile Include="Assets\Script\EscMenu.cs" />
     <Compile Include="Assets\Script\FinalControler.cs" />
     <Compile Include="Assets\Script\FirstControler.cs" />
+    <Compile Include="Assets\Script\Foxy_Life.cs" />
+    <Compile Include="Assets\Script\Game_Menu.cs" />
+    <Compile Include="Assets\Script\Gauge_Script.cs" />
+    <Compile Include="Assets\Script\Main_Menu.cs" />
     <Compile Include="Assets\Script\On_the_ground.cs" />
     <Compile Include="Assets\Script\SecondControler.cs" />
     <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
