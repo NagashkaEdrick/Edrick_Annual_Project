@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class GameMenu : MonoBehaviour
+public class Game_Menu : MonoBehaviour
 {
 
     //Variables
@@ -13,23 +13,27 @@ public class GameMenu : MonoBehaviour
     public int currentScene;
     private GameObject repop;
     private GameObject player;
+    public GameObject menuRecommencer;
 
     //Pour selection en couleur des boutons
     public EventSystem eS;
     private GameObject storeSelected;
-
+    [SerializeField]
+    private GameObject premierChoix;
+    [SerializeField]
+    private GameObject nonButton;
 
     // Use this for initialization
     void Start()
     {
-        storeSelected = eS.firstSelectedGameObject;
+        storeSelected = premierChoix;
     }
 
     void Update()
     {
-        if(eS.currentSelectedGameObject != storeSelected)
+        if (eS.currentSelectedGameObject != storeSelected)
         {
-            if(eS.currentSelectedGameObject == null)
+            if (eS.currentSelectedGameObject == null)
             {
                 eS.SetSelectedGameObject(storeSelected);
             }
@@ -44,6 +48,12 @@ public class GameMenu : MonoBehaviour
         {
             storeSelected = eS.firstSelectedGameObject;
         }
+
+        if (Input.GetButtonDown("Cancel") && menuRecommencer.activeInHierarchy)
+        {
+            menuRecommencer.SetActive(false);
+            eS.SetSelectedGameObject(premierChoix);
+        }
     }
 
     public void Menu()
@@ -51,20 +61,9 @@ public class GameMenu : MonoBehaviour
         SceneManager.LoadScene(menu);
     }
 
-    public void Option ()
+    public void Option()
     {
         SceneManager.LoadScene(option);
-    }
-
-    public void Reload()
-    {
-        SceneManager.LoadScene(currentScene);
-    }
-
-    public void Quit()
-    {
-        Debug.Log("Le jeu se ferme");
-        Application.Quit();
     }
 
     public void Return()
@@ -74,4 +73,20 @@ public class GameMenu : MonoBehaviour
         player.transform.position = repop.transform.position;
     }
 
+    public void Reload()
+    {
+        menuRecommencer.SetActive(true);
+        eS.SetSelectedGameObject(nonButton);
+    }
+
+    public void ReloadYes()
+    {
+        SceneManager.LoadScene(currentScene);
+    }
+
+    public void ReloadNo()
+    {
+        menuRecommencer.SetActive(false);
+        eS.SetSelectedGameObject(premierChoix);
+    }
 }

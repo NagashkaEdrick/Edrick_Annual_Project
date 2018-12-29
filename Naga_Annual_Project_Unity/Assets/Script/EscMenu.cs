@@ -6,8 +6,8 @@ public class EscMenu : MonoBehaviour
 {
 
     //Variables
-    public GameObject EscapeMenu;
-    public GameObject uiPlayer;
+    public GameObject escapeMenu;
+    public GameObject recommencer;
     
     void Awake()
     {
@@ -17,25 +17,24 @@ public class EscMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!EscapeMenu.activeInHierarchy)
+        if (!escapeMenu.activeInHierarchy)
         {
 
-            if (Input.GetButtonDown("Escape"))
+            if (Input.GetButtonDown("Cancel"))
             {
-                EscapeMenu.SetActive(true);
-                uiPlayer.SetActive(false);
+                escapeMenu.SetActive(true);
                 Time.timeScale = 0;
             }
 
         }
 
-        else if(EscapeMenu.activeInHierarchy)
+        else if(escapeMenu.activeInHierarchy && !recommencer.activeInHierarchy)
         {
 
-            if (Input.GetButtonDown("Escape") || Input.GetButtonDown("Cancel"))
+            if (Input.GetButtonDown("Cancel"))
             {
-                EscapeMenu.SetActive(false);
-                uiPlayer.SetActive(true);
+                recommencer.SetActive(false);
+                escapeMenu.SetActive(false);
                 Time.timeScale = 1;
             }
 

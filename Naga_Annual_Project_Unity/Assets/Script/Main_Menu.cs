@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class Main_Menu : MonoBehaviour
 {
     //Variables
-    public int play;
-    public int option;
+    [SerializeField]
+    private int play = 1;
+    [SerializeField]
+    private int exercices = 2;
 
     public EventSystem eS;
     private GameObject storeSelected;
@@ -46,9 +48,9 @@ public class Main_Menu : MonoBehaviour
         SceneManager.LoadScene(play);
     }
 
-    public void Option()
+    public void Exercices()
     {
-        SceneManager.LoadScene(option);
+        SceneManager.LoadScene(exercices);
     }
 
     public void Quit()
