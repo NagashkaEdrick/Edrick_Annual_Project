@@ -156,7 +156,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 23.122997, y: -30}
+  m_Offset: {x: -17.13169, y: -27.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -167,7 +167,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 95.53573, y: 20.361214}
+  m_Size: {x: 176.0451, y: 20.361214}
   m_EdgeRadius: 0
 --- !u!483693784 &201701304
 TilemapRenderer:
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 410484244}
   m_Layer: 0
   m_Name: Repop
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -544,7 +544,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 279
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1158,7 +1158,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 23.122997, y: -27.1792}
+  m_Offset: {x: -17.131691, y: -26.300209}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1169,7 +1169,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 95.53573, y: 40.814445}
+  m_Size: {x: 176.04512, y: 42.572426}
   m_EdgeRadius: 0
 --- !u!114 &1150997121
 MonoBehaviour:
@@ -1182,7 +1182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01762983e048f144fb4a50ef2f474d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repop: {fileID: 410484243}
 --- !u!483693784 &1150997122
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -1328,7 +1327,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: -20
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16

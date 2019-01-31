@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Dead : MonoBehaviour {
 
-    public GameObject repop;
+    private GameObject repop;
     private GameObject player;
     private Animator anim;
-    private float fallTime = 1f;
+    private float fallTime = 0.5f;
 
 
 	// Use this for initialization
 	void Start () {
+        repop = GameObject.FindGameObjectWithTag("Respawn");
         player = GameObject.FindGameObjectWithTag("Player");
         anim = player.GetComponent<Animator>();
     }
@@ -23,7 +24,6 @@ public class Dead : MonoBehaviour {
         {
             anim.SetTrigger("Hurt");
             StartCoroutine(Deadfall());
-
         }
 	}
 
