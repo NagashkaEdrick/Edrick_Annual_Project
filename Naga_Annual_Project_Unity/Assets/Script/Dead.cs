@@ -24,7 +24,6 @@ public class Dead : MonoBehaviour {
         {
             anim.SetTrigger("Hurt");
             StartCoroutine(Deadfall());
-
         }
 	}
 
